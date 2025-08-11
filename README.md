@@ -73,14 +73,14 @@ The script copies the following local folders into `~/.config`:
 1. Clone this repository or download the script:
 
    ```bash
-       git clone https://github.com/YOUR_USERNAME/arch-config-installer.git
-       cd arch-config-installer
+    git clone https://github.com/YOUR_USERNAME/arch-config-installer.git
+    cd arch-config-installer
    ```
 
    ```bash
-     chmod +x install.sh
+    chmod +x install.sh
    ```
 
    ```bash
-   ./install.sh
+    ./install.sh
    ```
