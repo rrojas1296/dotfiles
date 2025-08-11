@@ -1,0 +1,87 @@
+@import "mocha.css";
+
+* {
+  font-family: "FantasqueSansMono Nerd Font", monospace;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: #111117;
+  border: none;
+}
+
+#workspaces button {
+  margin: 6px 0px;
+  padding: 0px 16px;
+  border-radius: 6px;
+  border: none;
+  color: #7389de;
+}
+#workspaces button.active {
+  color: #fff;
+  background-color: #111117;
+}
+#workspaces button:hover {
+  color: #ffffff;
+}
+
+#clock {
+  color: #ffffff;
+}
+
+#pulseaudio {
+  color: #a6e3a1;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin: 6px 0px 6px 20px;
+  background-color: #111117;
+}
+#pulseaudio.muted {
+  color: #f38ba8;
+}
+#network {
+  color: #dd80ed;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin: 6px 20px 6px 20px;
+  background-color: #111117;
+}
+
+#tray {
+  color: #8383e6;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin: 6px 0px 6px 20px;
+  background-color: #111117;
+}
+#clock {
+  color: #f38ba8;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin: 6px 0px 6px 20px;
+  background-color: #111117;
+}
+
+#custom-lang {
+  color: #80afed;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin: 6px 0px 6px 20px;
+  background-color: #111117;
+}
+
+#custom-updates {
+  color: #f9e2af;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin: 6px 0px 6px 20px;
+  background-color: #111117;
+}
+
+#custom-network_speed {
+  color: #d6acf2;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin: 6px 20px 6px 20px;
+  background-color: #111117;
+}

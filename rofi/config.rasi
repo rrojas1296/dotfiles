@@ -1,0 +1,5 @@
+configuration {
+ icon-theme: "Papirus";
+ show-icons: true;
+ }
+@theme "/home/oasis/.local/share/rofi/themes/rounded-blue-dark.rasi"

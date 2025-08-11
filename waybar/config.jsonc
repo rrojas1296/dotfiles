@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+  "height": 34,
+  "modules-left": [""],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "battery",
+    "custom/lang",
+    "custom/updates",
+    "clock",
+    "custom/network_speed"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "disable-scroll": false,
+    "on-click": "activate",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": []
+    },
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "󰊗"
+    }
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+  "custom/lang": {
+    "exec": "kblayout.sh",
+    "interval": 1,
+    "return-type": "json",
+    "on-click": "kblayout.sh --toggle"
+  },
+  "custom/updates": {
+      "exec": "kbupdates.sh --checkUpdates",
+      "interval": 10,
+      "return-type": "json",
+      "on-click": "kbupdates.sh --update"
+  },
+  "custom/network_speed": {
+    "exec": "kbnetwork.sh",
+    "interval": 2,
+    "return-type": "json"
+  },
+  "clock": {
+    "format": "{:%A, %d %B %Y  %I:%M %p}",
+    "interval": 60,
+    "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt>{calendar}</tt>"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": " Muted",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": true
+  },
+  "tray": {
+    "spacing": 8
+  }
+}

@@ -1,0 +1,15 @@
+# Colores
+background-color=#1e1e2e
+text-color=#ffffff
+border-color=#404063
+
+
+# Tamaños y posición
+width=300
+border-size=2
+border-radius=14
+margin=10
+padding=25
+anchor=top-right
+font=JetBrainsMono 10
+default-timeout=5000
