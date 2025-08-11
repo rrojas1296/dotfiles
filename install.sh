@@ -26,6 +26,7 @@ DEPENDENCIES=(
     python-pynvim
     tmux
     base-devel
+    htop
 )
 
 # ===== INSTALLING PACKAGES WITH PARU =====
