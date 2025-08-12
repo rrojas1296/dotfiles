@@ -27,6 +27,8 @@ DEPENDENCIES=(
     tmux
     base-devel
     htop
+    gnome-keyring
+    libsecret
 )
 
 # ===== INSTALLING PACKAGES WITH PARU =====
@@ -35,6 +37,7 @@ PARU_PACKAGES=(
     visual-studio-code-bin
     neofetch
     android-studio
+    spotify
 )
 
 
@@ -126,6 +129,7 @@ echo -e "\n\033[1;36m[*] Installing NVM plugin for Fish...\033[0m"
 fish -c "fisher install jorgebucaran/nvm.fish"
 fish -c "fisher install catppuccin/fish"
 fish -c "fish_config theme save 'Catppuccin Mocha'"
+fish -c "nvm install lts"
 
 
 # ===== INSTALLING TPM FOR TMUX =====

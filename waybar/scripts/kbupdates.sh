@@ -4,7 +4,7 @@ TERMINAL="alacritty"  # Cambia aquí tu terminal favorita
 
 show_updates() {
     official_updates=$(pacman -Qu 2>/dev/null | wc -l)
-    aur_updates=$(paru -Qm --aur-out-of-date 2>/dev/null | wc -l)
+    aur_updates=$(paru -Qua 2>/dev/null | wc -l)
     total_updates=$((official_updates + aur_updates))
 
     if [ "$total_updates" -eq 0 ]; then
