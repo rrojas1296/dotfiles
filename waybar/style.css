@@ -1,10 +1,12 @@
+@import "mocha.css";
+
 * {
   font-family: "FantasqueSansMono Nerd Font", monospace;
   font-size: 14px;
 }
 
 window#waybar {
-  background-color: #111117;
+  background-color: #1e1e2e;
   border: none;
 }
 
@@ -13,14 +15,19 @@ window#waybar {
   padding: 0px 16px;
   border-radius: 6px;
   border: none;
-  color: #7389de;
+  color: #f38ba8;
 }
 #workspaces button.active {
-  color: #f9e2af;
+  color: #5e98f7;
   background-color: #111117;
 }
+
+#workspaces button.empty {
+  color: #5b5b78;
+}
+
 #workspaces button:hover {
-  color: #ffffff;
+  color: #5b5b78;
 }
 
 #clock {
