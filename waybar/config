@@ -14,26 +14,27 @@
   ],
 
   "hyprland/workspaces": {
-    "format": "{icon}",
-    "disable-scroll": false,
+    "disable-scroll": true,
     "on-click": "activate",
-    "persistent_workspaces": {
+    "all-outputs": true,
+    "active-only": false,
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
       "4": [],
       "5": [],
       "6": [],
-      "7": []
     },
+    "format": "{icon}",
     "format-icons": {
       "1": "",
       "2": "",
-      "3": "",
+      "3": "",
       "4": "",
-      "5": "",
+      "5": "󰓇",
       "6": "",
-      "7": "󰊗"
+      "7": ""
     }
   },
   "hyprland/window": {
