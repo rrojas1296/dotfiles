@@ -11,23 +11,18 @@ window#waybar {
 }
 
 #workspaces button {
-  margin: 6px 0px;
-  padding: 0px 16px;
-  border-radius: 6px;
   border: none;
-  color: #f38ba8;
+  margin: 0px 10px;
+  color: #5b5b78;
+}
+#workspaces {
+  background-color: #111117;
+  margin: 6px 0px 6px 20px;
+  border-radius: 50px;
+  padding: 0px 12px;
 }
 #workspaces button.active {
-  color: #5e98f7;
-  background-color: #111117;
-}
-
-#workspaces button.empty {
-  color: #5b5b78;
-}
-
-#workspaces button:hover {
-  color: #5b5b78;
+  color: #fa5299; /* red */
 }
 
 #clock {
