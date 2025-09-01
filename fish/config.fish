@@ -4,8 +4,6 @@
 # Aliases
 # =====================
 
-function fish_greeting
-end
 
 function fish_prompt --description 'Arch icon | Folder | Git | Node version'
     # Colors
@@ -80,11 +78,12 @@ export ANDROID_HOME="$HOME/.Android/Sdk"
 export PATH="$HOME/.flutter/bin:$PATH"
 export CHROME_EXECUTABLE="brave"
 
-# =====================
-# Prompt opcional
-# =====================
-# Puedes instalar starship para un prompt más bonito
-# https://starship.rs
-#if type -q starship
-#    starship init fish | source
-#end
+if status is-interactive
+    and not set -q TMUX  # opcional, si no quieres en tmux
+    and test -z "$NVIM"  # opcional, para no mostrar en neovim
+    pfetch
+end
+
+function fish_greeting
+end
+
