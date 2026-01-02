@@ -3,8 +3,8 @@
 TERMINAL="alacritty"  # Cambia aquí tu terminal favorita
 
 show_updates() {
-    official_updates=$(pacman -Qu 2>/dev/null | wc -l)
-    aur_updates=$(paru -Qua 2>/dev/null | wc -l)
+    official_updates=$(pacman -Qu  | wc -l)
+    aur_updates=$(paru -Qua  | wc -l)
     total_updates=$((official_updates + aur_updates))
 
     if [ "$total_updates" -eq 0 ]; then
