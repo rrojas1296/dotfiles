@@ -64,6 +64,7 @@ alias gs='git status'
 alias gp='git pull'
 alias gpu='git push'
 alias n='nvim'
+alias hx='helix'
 alias t='tmux'
 
 # Starship prompt 
@@ -87,3 +88,6 @@ end
 function fish_greeting
 end
 
+
+# opencode
+fish_add_path /home/oasis/.opencode/bin
