@@ -1,0 +1,28 @@
+layout {
+  tab name="Frontend" {
+  pane {
+    cwd "~/Projects/fullstack-projects/rently/rently-client"
+  }
+  pane size=1 borderless=true {
+    plugin location="zellij:compact-bar"
+    } 
+  }
+
+  tab name="Api" {
+  pane {
+    cwd "~/Projects/fullstack-projects/rently/rently-api"
+  }
+  pane size=1 borderless=true {
+    plugin location="zellij:compact-bar"
+    }
+  }
+
+  tab name="Components" {
+  pane {
+    cwd "~/Projects/fullstack-projects/rently/rently-components"
+  }
+  pane size=1 borderless=true {
+    plugin location="zellij:compact-bar"
+    }
+  }
+}

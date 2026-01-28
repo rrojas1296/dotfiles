@@ -4,7 +4,6 @@
 # Aliases
 # =====================
 
-
 function fish_prompt --description 'Arch icon | Folder | Git | Node version'
     # Colors
     set -l COLOR_ICON cyan
@@ -66,6 +65,7 @@ alias gpu='git push'
 alias n='nvim'
 alias hx='helix'
 alias t='tmux'
+alias z="zellij -l ~/.config/zellij/layouts/default.kdl"
 
 # Starship prompt 
 # starship init fish | source
@@ -78,6 +78,7 @@ export PATH="$HOME/.config/waybar/scripts:$PATH"
 export ANDROID_HOME="$HOME/.Android/Sdk"
 export PATH="$HOME/.flutter/bin:$PATH"
 export CHROME_EXECUTABLE="brave"
+export TERM="kitty"
 
 if status is-interactive
     and not set -q TMUX  # opcional, si no quieres en tmux

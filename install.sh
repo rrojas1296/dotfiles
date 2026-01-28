@@ -27,6 +27,7 @@ DEPENDENCIES=(
     python-pynvim
     tmux
     base-devel
+    zellij
     htop
     gnome-keyring
     libsecret
@@ -50,11 +51,12 @@ FOLDERS_TO_COPY=(
     ./mako
     ./rofi
     ./waybar
+    ./zellij
 )
 
 SCRIPTS_DIR="$HOME/.config/waybar/scripts"
 ROFI_THEMES_REPO="https://github.com/newmanls/rofi-themes-collection"
-NVIM_REPO="https://github.com/rrojas1296/nvim.git"
+NVIM_REPO="https://github.com/rrojas1296/nvim-2026"
 
 # Target config directory
 CONFIG_DIR="$HOME/.config"

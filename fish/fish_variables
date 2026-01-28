@@ -9,4 +9,4 @@ SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ecatppuccin/fish\x1ejorgebucaran/nvm\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_user_paths:/home/oasis/\x2eopencode/bin\x1e/home/oasis/\x2elocal/bin
-SETUVAR nvm_default_version:v22\x2e19\x2e0
+SETUVAR nvm_default_version:24\x2e13\x2e0
