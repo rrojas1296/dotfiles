@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TERMINAL="alacritty"  # Cambia aquí tu terminal favorita
+TERMINAL="ghostty"  # Cambia aquí tu terminal favorita
 
 show_updates() {
     official_updates=$(pacman -Qu  | wc -l)

@@ -17,6 +17,7 @@ DEPENDENCIES=(
     mako
     sddm
     papirus-icon-theme
+    ghostty
     ttf-nerd-fonts-symbols 
     ttf-intone-nerd 
     ttf-hack-nerd 
@@ -25,6 +26,7 @@ DEPENDENCIES=(
     wl-clipboard
     ripgrep
     python-pynvim
+    kitty
     tmux
     base-devel
     zellij
@@ -52,6 +54,8 @@ FOLDERS_TO_COPY=(
     ./rofi
     ./waybar
     ./zellij
+    ./kitty
+    ./ghostty
 )
 
 SCRIPTS_DIR="$HOME/.config/waybar/scripts"
