@@ -21,6 +21,7 @@ DEPENDENCIES=(
     ttf-nerd-fonts-symbols 
     ttf-intone-nerd 
     ttf-hack-nerd 
+    ttf-jetbrains-mono-nerd
     tree-sitter-cli
     adobe-source-han-sans-jp-fonts
     wl-clipboard
