@@ -1,12 +1,3 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export NVM_DIR:/home/oasis/\x2envm
-SETUVAR --export --path PATH:/home/oasis/\x2elocal/share/nvm/v22\x2e18\x2e0/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/opt/cuda/bin\x1e/opt/cuda/nsight_compute\x1e/opt/cuda/nsight_systems/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/oasis/\x2elocal/bin
 SETUVAR __fish_initialized:4300
-SETUVAR _fisher_catppuccin_2F_fish_files:\x7e/\x2econfig/fish/themes/Catppuccin\x20Frappe\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Latte\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Macchiato\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Mocha\x2etheme
-SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ecatppuccin/fish\x1ejorgebucaran/nvm\x2efish
-SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR fish_user_paths:/home/oasis/\x2eopencode/bin\x1e/home/oasis/\x2elocal/bin
-SETUVAR nvm_default_version:24\x2e13\x2e0

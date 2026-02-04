@@ -1,7 +1,7 @@
-theme = TokyoNight Night  
-window-padding-x = 16
-window-padding-y = 16 
-background-blur = true 
+theme = TokyoNight Moon
+font-family = JetBrainsMonoNerdFont
 background-opacity = 0.9
+background-blur = true
 confirm-close-surface = false
-font-family = JetBrains Mono
+window-padding-x = 16
+window-padding-y = 16

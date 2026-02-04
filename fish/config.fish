@@ -1,84 +1,57 @@
-# ~/.config/fish/config.fish
+set -g fish_greeting
 
-# =====================
-# Aliases
-# =====================
+# ----------------
+# Git prompt setup
+# ----------------
+set -g __fish_git_prompt_showdirtystate 1
+set -g __fish_git_prompt_showuntrackedfiles 1
+set -g __fish_git_prompt_showupstream informative
+set -g __fish_git_prompt_color_branch blue
+set -g __fish_git_prompt_color_dirty red
+set -g __fish_git_prompt_color_staged green
+set -g __fish_git_prompt_color_upstream cyan
 
-function fish_prompt --description 'Arch icon | Folder | Git | Node version'
-    # Colors
-    set -l COLOR_ICON cyan
-    set -l COLOR_NODE green
-    set -l COLOR_CWD magenta
-    set -l COLOR_GIT_BRANCH blue
-    set -l COLOR_GIT_DIRTY red
-    set -l COLOR_RESET (set_color normal)
+# ----------------
+# Custom Fish Prompt
+# ----------------
+function fish_prompt
+    # Arch Linux logo
+    set_color blue --bold
+    echo -n " "
 
-    # Arch icon
-    set -l ARCH_ICON "󰣇"
+    # Current directory
+    set_color cyan
+    echo -n (prompt_pwd) " "
 
-    # Current folder only
-    set -l cwd_segment (set_color $COLOR_CWD)(basename (pwd))(set_color normal)
+    # Git repository status
+    set_color blue
+    __fish_git_prompt " %s "
 
-    # Git branch + dirty state
-    if git rev-parse --is-inside-work-tree >/dev/null 2>&1
-        set -l git_branch (git rev-parse --abbrev-ref HEAD 2>/dev/null)
-        set -l git_dirty ""
-        if not git diff --quiet --ignore-submodules -- 2>/dev/null
-            set git_dirty "*"
-        end
-        if test -n "$git_dirty"
-            set git_segment (set_color $COLOR_GIT_DIRTY)" $git_branch$git_dirty"(set_color normal)
-        else
-            set git_segment (set_color $COLOR_GIT_BRANCH)" $git_branch"(set_color normal)
-        end
-    else
-        set git_segment ""
+    # Node.js version (GREEN)
+    if type -q node
+        set_color green --bold
+        echo -n "⬢ "(node -v)" "
     end
 
-    # Node.js version
-    set -l node_segment ""
-    set -l node_ver (node -v ^/dev/null)
-    if test $status -eq 0 -a -n "$node_ver"
-        set node_ver (string replace -r '^v' '' $node_ver)
-        set node_segment (set_color $COLOR_NODE)"node:$node_ver"(set_color normal)
-    end
+    # Prompt symbol
+    set_color blue --bold
+    echo -n "❯ "
 
-    # Build prompt in desired order
-    printf "%s " (set_color $COLOR_ICON)$ARCH_ICON(set_color normal)
-    printf "%s " $cwd_segment
-    if test -n "$git_segment"
-        printf "%s " $git_segment
-    end
-    if test -n "$node_segment"
-        printf "%s " $node_segment
-    end
-
-    printf "\n%s> %s" (set_color $COLOR_ICON) $COLOR_RESET
+    set_color normal
 end
 
+# ----------------
+# Right prompt (optional)
+# ----------------
+function fish_right_prompt
+    set_color brblack
+    date "+%H:%M"
+    set_color normal
+end
 
-# Aliases for common commands
-alias ll='ls -lah'
-alias gs='git status'
-alias gp='git pull'
-alias gpu='git push'
-alias n='nvim'
-alias hx='helix'
-alias t='tmux'
-alias z="zellij -l ~/.config/zellij/layouts/default.kdl"
-
-# Starship prompt 
-# starship init fish | source
-
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/.config/waybar/scripts:$PATH"
-export ANDROID_HOME="$HOME/.Android/Sdk"
-export PATH="$HOME/.flutter/bin:$PATH"
-export CHROME_EXECUTABLE="brave"
-export TERM="kitty"
+alias n="nvim"
+alias z="zellij"
+alias ll="ls -la"
 
 if status is-interactive
     and not set -q TMUX  # opcional, si no quieres en tmux
@@ -86,9 +59,13 @@ if status is-interactive
     pfetch
 end
 
-function fish_greeting
-end
+export PATH="$HOME/.config/waybar/scripts:$PATH"
 
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
 
-# opencode
-fish_add_path /home/oasis/.opencode/bin
+# Gnome keyring
+set -x GTK_USE_PORTAL 1
+set -x XDG_CURRENT_DESKTOP Hyprland
+

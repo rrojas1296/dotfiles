@@ -1,28 +1,28 @@
-@import "mocha.css";
-
 * {
-  font-family: "FantasqueSansMono Nerd Font", monospace;
+  font-family: "JetBrainsMonoNerdFont", monospace;
   font-size: 14px;
 }
 
 window#waybar {
-  background-color: #1e1e2e;
+  background-color: #1a1b26;
   border: none;
 }
 
 #workspaces button {
   border: none;
-  margin: 0px 10px;
+  margin: 0px 8px;
   color: #5b5b78;
 }
+
 #workspaces {
-  background-color: #111117;
+  background-color: #0e0e12;
   margin: 6px 0px 6px 20px;
   border-radius: 50px;
   padding: 0px 12px;
 }
+
 #workspaces button.active {
-  color: #fa5299; /* red */
+  color: #fa5299;
 }
 
 #clock {
@@ -32,56 +32,59 @@ window#waybar {
 #pulseaudio {
   color: #a6e3a1;
   padding: 5px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: #111117;
+  background-color: #0e0e12;
 }
+
 #pulseaudio.muted {
   color: #f38ba8;
 }
+
 #network {
   color: #dd80ed;
   padding: 5px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 6px 20px 6px 20px;
-  background-color: #111117;
+  background-color: #0e0e12;
 }
 
 #tray {
   color: #8383e6;
   padding: 5px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: #111117;
+  background-color: #0e0e12;
 }
+
 #clock {
   color: #f38ba8;
   padding: 5px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: #111117;
+  background-color: #0e0e12;
 }
 
 #custom-lang {
   color: #80afed;
   padding: 5px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: #111117;
+  background-color: #0e0e12;
 }
 
 #custom-updates {
   color: #f9e2af;
   padding: 5px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: #111117;
+  background-color: #0e0e12;
 }
 
 #custom-network_speed {
   color: #d6acf2;
   padding: 5px 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 6px 20px 6px 20px;
-  background-color: #111117;
+  background-color: #0e0e12;
 }
