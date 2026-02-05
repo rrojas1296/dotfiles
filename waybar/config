@@ -1,16 +1,17 @@
 {
   "layer": "top",
   "height": 34,
-  "modules-left": [""],
+  "modules-left": ["custom/launcher", "wlr/taskbar", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "tray",
+    "memory",
     "pulseaudio",
     "battery",
     "custom/lang",
     "custom/updates",
     "clock",
-    "custom/network_speed"
+    "network"
   ],
 
   "hyprland/workspaces": {
@@ -44,16 +45,26 @@
     "return-type": "json",
     "on-click": "kblayout.sh --toggle"
   },
-  "custom/updates": {
-      "exec": "kbupdates.sh --checkUpdates",
-      "interval": 10,
-      "return-type": "json",
-      "on-click": "kbupdates.sh --update"
+  "custom/launcher": {
+    "interval": 1,
+    "format": "󰣇 ",
+    "on-click": "rofi -show drun"
   },
-  "custom/network_speed": {
-    "exec": "kbnetwork.sh",
-    "interval": 2,
-    "return-type": "json"
+  "custom/updates": {
+    "exec": "kbupdates.sh --checkUpdates",
+    "interval": 10,
+    "return-type": "json",
+    "on-click": "kbupdates.sh --update"
+  },
+  "network": {
+    "interface": "enp5s0",
+    "format-ethernet": "{bandwidthUpBits} 󰕒 {bandwidthDownBits} 󰇚",
+    "format-disconnected": "No connection", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
   },
   "clock": {
     "format": "{:%A, %d %B %Y  %I:%M %p}",
@@ -61,7 +72,7 @@
     "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt>{calendar}</tt>"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon}  {volume} %",
     "format-muted": " Muted",
     "format-icons": {
       "headphones": "",
@@ -82,5 +93,21 @@
   },
   "tray": {
     "spacing": 8
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 14,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "sort-by-app-id": true
+  },
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "separate-outputs": true
+  },
+  "memory": {
+    "format": "RAM  {} %",
   }
 }
