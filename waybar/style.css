@@ -1,115 +1,110 @@
+@import "./colors.css";
 * {
   font-family: "JetBrainsMonoNerdFont", monospace;
   font-size: 14px;
 }
 
 window#waybar {
-  background-color: rgba(14, 15, 20, 0.4);
-  border: none;
+  background-color: alpha(@bg, 0.4);
 }
 
 #workspaces button {
   border: none;
   margin: 0px 4px;
   padding: 0px 4px 0px 10px;
-  color: #a9b1d6;
+  color: @white;
 }
 
 #workspaces {
   margin: 6px 0px 6px 20px;
   border-radius: 50px;
   padding: 0px 12px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #workspaces button.active {
-  color: #fa5299;
-}
-
-#clock {
-  color: #ffffff;
+  color: @red;
 }
 
 #pulseaudio {
-  color: #a6e3a1;
+  color: @green;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #pulseaudio.muted {
-  color: #f38ba8;
+  color: @red;
 }
 
 #network {
-  color: #dd80ed;
+  color: @blue;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 20px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #tray {
-  color: #8383e6;
+  color: @fg;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #clock {
-  color: #f38ba8;
+  color: @red;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #custom-lang {
-  color: #80afed;
+  color: @yellow;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #custom-updates {
-  color: #f9e2af;
+  color: @white;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #custom-network_speed {
-  color: #d6acf2;
+  color: @magenta;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 20px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #custom-launcher {
   /* BLue archlinux  */
-  color: #80afed;
+  color: @blue;
   margin: 6px 0px 6px 20px;
   padding: 5px 10px 5px 14px;
   border-radius: 12px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
 
 #taskbar {
-  color: #80afed;
   padding: 5px 10px 5px 14px;
 }
 
@@ -118,16 +113,16 @@ window#waybar {
 }
 
 #taskbar button.active {
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
   border-radius: 12px;
 }
 
 #memory {
-  color: #bb9af7;
+  color: @blue;
   padding: 5px 16px;
   border-radius: 12px;
   margin: 6px 0px 6px 20px;
-  background-color: rgba(26, 27, 38, 0.4);
-  border: 1px solid #5c6178;
+  background-color: alpha(@bg, 0.4);
+  border: 1px solid @border;
 }
