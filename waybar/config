@@ -30,8 +30,8 @@
     "format": "{icon}",
     "format-icons": {
       "urgent": "",
-      "active": "󰊠 ",
-      "default": "󰮯 "
+      "default": "󰊠 ",
+      "active": "󰮯 "
     }
   },
   "hyprland/window": {
@@ -70,7 +70,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["", " ", " "]
     },
     "scroll-step": 5,
     "on-click": "pavucontrol"

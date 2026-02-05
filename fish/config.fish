@@ -69,3 +69,5 @@ set --export PATH $BUN_INSTALL/bin $PATH
 set -x GTK_USE_PORTAL 1
 set -x XDG_CURRENT_DESKTOP Hyprland
 
+# SSH fish
+set -x SSH_AUTH_SOCK /home/oasis/.ssh/agent/s.CCLzgJ7Cmn.agent.c1zMjZT2Jg

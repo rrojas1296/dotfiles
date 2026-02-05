@@ -1,16 +1,16 @@
 #!/bin/bash
 
-TERMINAL="ghostty"  # Cambia aquí tu terminal favorita
+TERMINAL="kitty"  # Cambia aquí tu terminal favorita
 
 show_updates() {
-    official_updates=$(pacman -Qu  | wc -l)
-    aur_updates=$(paru -Qua  | wc -l)
+    official_updates=$(pacman -Qu 2>/dev/null | wc -l)
+    aur_updates=$(paru -Qua 2>/dev/null | wc -l)
     total_updates=$((official_updates + aur_updates))
 
-    if [ "$total_updates" -eq 0 ]; then
-        echo "{\"text\":\"  0\",\"tooltip\":\"No updates available\"}"
+    if [ "$official_updates" -eq 0 ] && [ "$aur_updates" -eq 0 ]; then
+        echo "{\"text\":\"󰮯 $official_updates   $aur_updates\",\"tooltip\":\"Official packages: $official_updates\nAUR packages: $aur_updates\"}"
     else
-        echo "{\"text\":\"  $total_updates\",\"tooltip\":\"Click to update system\"}"
+        echo "{\"text\":\"󰮯 $official_updates   $aur_updates\",\"tooltip\":\"Official packages: $official_updates\nAUR packages: $aur_updates\"}"
     fi
 }
 
