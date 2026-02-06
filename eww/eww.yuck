@@ -1,0 +1,21 @@
+(defwidget powermenu []
+  (box
+    :orientation "horizontal"
+    :class "powermenu"
+    :spacing 24
+
+    (button :class "pm-btn"        :onclick "hyprctl dispatch exit" "󰗽")
+    (button :class "pm-btn"        :onclick "systemctl suspend"     "󰤄")
+    (button :class "pm-btn"        :onclick "systemctl reboot"      "󰜉")
+    (button :class "pm-btn"        :onclick "systemctl poweroff"    "")
+  )
+)
+
+(defwindow powermenu
+  :monitor 0
+  :exclusive false 
+  :focusable false 
+  :stacking "overlay"
+  :geometry (geometry :x "50%" :y "50%" :anchor "center")
+  (powermenu)
+)

@@ -30,8 +30,8 @@
     },
     "format": "{icon}",
     "format-icons": {
-      "1": "󰈹 ",
-      "2": " ",
+      "1": " ",
+      "2": "󰈹 ",
       "3": " ",
       "4": " ",
       "5": " ",
@@ -52,8 +52,8 @@
   },
   "custom/launcher": {
     "interval": 1,
-    "format": "󰣇 ",
-    "on-click": "rofi -show drun"
+    "format": "󰐥 ",
+    "on-click": "eww open --toggle powermenu"
   },
   "custom/updates": {
     "exec": "kbupdates.sh --checkUpdates",
