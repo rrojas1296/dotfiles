@@ -60,6 +60,8 @@ if status is-interactive
 end
 
 export PATH="$HOME/.config/waybar/scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export TERMINAL="kitty"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
@@ -68,6 +70,3 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # Gnome keyring
 set -x GTK_USE_PORTAL 1
 set -x XDG_CURRENT_DESKTOP Hyprland
-
-# SSH fish
-set -x SSH_AUTH_SOCK /home/oasis/.ssh/agent/s.CCLzgJ7Cmn.agent.c1zMjZT2Jg
