@@ -1,5 +1,13 @@
 configuration {
- icon-theme: "Papirus";
- show-icons: true;
- }
-@theme "/home/oasis/.local/share/rofi/themes/rounded-blue-dark.rasi"
+    modi: "drun,run";
+    show-icons: true;
+    icon-theme: "Papirus";
+    drun-display-format: "{name}";
+    font: "JetBrainsMono 12";
+    location: 0;
+    disable-history: false;
+    sidebar-mode: false;
+}
+
+@theme "rounded-launcher"
+

@@ -1,0 +1,77 @@
+configuration {
+    markup-rows: true;
+    show-icons: false;
+}
+
+* {
+    font: "JetBrainsMono 11";
+
+    bg:            rgba(26, 27, 38, 1);
+    bg-alt:        rgba(169, 177, 214, 0.1);
+    fg:            #EDEAF2;
+    fg-alt:        #B8AEC8;
+    accent:        rgba(169, 177, 214, 0.5);
+
+    radius:        22px;
+    padding:       16px;
+    spacing:       18px;
+}
+
+window {
+    background-color: @bg;
+    border: 2px;
+    width: 350px;
+    fixed-height: true;
+    border-color: @accent;
+    border-radius: @radius;
+}
+
+mainbox {
+    padding: 24px;
+    spacing: 20px;
+    background-color: transparent;
+}
+
+inputbar {
+    enabled: false;
+}
+
+listview {
+    columns: 1;
+    lines: 4;
+    layout: vertical;
+    background-color: transparent;
+    spacing: 18px;
+    fixed-height: true;
+}
+
+element {
+    orientation: vertical;
+    padding: 6px;
+    border-radius: 18px;
+    background-color: transparent;
+}
+
+element-icon {
+    enabled: false;
+    background-color: transparent;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    markup: true;
+    text-align: center;
+    text-color: @fg;
+    font: "JetBrainsMono 14";
+    cursor: pointer;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @bg-alt;
+}
+
+element selected element-text {
+    text-color: @fg;
+}

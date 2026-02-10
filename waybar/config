@@ -53,7 +53,7 @@
   "custom/launcher": {
     "interval": 1,
     "format": "󰐥 ",
-    "on-click": "eww open --toggle powermenu"
+    "on-click": "powermenu.sh"
   },
   "custom/updates": {
     "exec": "kbupdates.sh --checkUpdates",
