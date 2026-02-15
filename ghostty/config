@@ -1,8 +1,9 @@
-theme = TokyoNight Moon
+theme = TokyoNight Night 
 font-family = JetBrainsMonoNerdFont
-background-opacity = 0.9
+background-opacity = 0.8
 background-blur = true
 confirm-close-surface = false
-window-padding-x = 16
-window-padding-y = 16
-background = #1a1b26
+window-padding-x = 8
+window-padding-y = 8
+window-width = 140
+window-height = 30
