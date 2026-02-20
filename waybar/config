@@ -45,10 +45,10 @@
     "max-length": 50
   },
   "custom/lang": {
-    "exec": "kblayout.sh",
+    "exec": "layout.sh",
     "interval": 1,
     "return-type": "json",
-    "on-click": "kblayout.sh --toggle"
+    "on-click": "layout.sh --toggle"
   },
   "custom/launcher": {
     "interval": 1,
@@ -56,10 +56,10 @@
     "on-click": "powermenu.sh"
   },
   "custom/updates": {
-    "exec": "kbupdates.sh --checkUpdates",
+    "exec": "updates.sh --checkUpdates",
     "interval": 10,
     "return-type": "json",
-    "on-click": "kbupdates.sh --update"
+    "on-click": "updates.sh --update"
   },
   "network": {
     "interface": "enp5s0",
@@ -103,7 +103,7 @@
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 14,
-    "icon-theme": "Numix-Circle",
+    "icon-theme": "Papirus-Dark",
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
@@ -114,7 +114,7 @@
     "separate-outputs": true
   },
   "memory": {
-    "format": "RAM  {} %",
+    "format": "  {used} GiB",
     "interval": 1
   }
 }
