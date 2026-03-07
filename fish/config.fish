@@ -56,8 +56,20 @@ alias ll="ls -la"
 if status is-interactive
     and not set -q TMUX  # opcional, si no quieres en tmux
     and test -z "$NVIM"  # opcional, para no mostrar en neovim
-    fastfetch
+    fastfetch 
 end
 
 export PATH="$HOME/.config/waybar/scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export TERMINAL="kitty"
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# Gnome keyring
+set -x GTK_USE_PORTAL 1
+set -x XDG_CURRENT_DESKTOP Hyprland
+
+# opencode
+fish_add_path /home/oasis/.opencode/bin
