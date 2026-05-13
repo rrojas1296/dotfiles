@@ -61,7 +61,7 @@ end
 
 export PATH="$HOME/.config/waybar/scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export TERMINAL="kitty"
+export TERMINAL="ghostty"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"

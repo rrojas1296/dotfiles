@@ -1,10 +1,7 @@
-# Colores
 background-color=#1a1b26
 text-color=#ffffff
 border-color=#404063
 
-
-# Tamaños y posición
 width=300
 border-size=2
 border-radius=14
