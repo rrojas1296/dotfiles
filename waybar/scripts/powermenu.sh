@@ -2,10 +2,10 @@
 
 rofi_cmd="rofi -dmenu -theme ~/.config/rofi/powermenu.rasi"
 
-option1="󰗽 Logout"
-option2="󰜉 Shutdown"
-option3="󰤄 Suspend"
-option4="󰑓 Reboot"
+option1="󰗽   Logout"
+option2="󰜉   Shutdown"
+option3="󰤄   Suspend"
+option4="󰑓   Reboot"
 
 options="$option1\n$option2\n$option3\n$option4"
 
