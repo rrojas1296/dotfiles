@@ -12,16 +12,16 @@ options="$option1\n$option2\n$option3\n$option4"
 chosen=$(printf "%b\n" "$options" | $rofi_cmd)
 
 case "$chosen" in
-  "󰗽 Logout")
+  "󰗽   Logout")
     hyprctl dispatch exit
     ;;
-  "󰜉 Shutdown")
+  "󰜉   Shutdown")
     systemctl poweroff
     ;;
-  "󰤄 Suspend")
+  "󰤄   Suspend")
     systemctl suspend
     ;;
-  "󰑓 Reboot")
+  "󰑓   Reboot")
     systemctl reboot
     ;;
 esac

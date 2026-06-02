@@ -1,13 +1,30 @@
-@define-color bg      #1f1f28;
-@define-color fg      #dcd7ba;
-@define-color border  #5c6178;
+/* =========================
+   BASE
+   ========================= */
 
-/* Tokyo night colors */
-@define-color black   #090618;
-@define-color red     #c34043;
-@define-color green   #76946a;
-@define-color yellow  #c0a36e;
-@define-color blue    #7e9cd8;
-@define-color magenta #957fb8;
-@define-color cyan    #6a9589;
-@define-color white   #c8c093;
+@define-color bg #222436;
+@define-color fg #c8d3f5;
+@define-color border #444a73;
+
+/* =========================
+   TOKYO NIGHT MOON COLORS
+   ========================= */
+
+@define-color black #1b1d2b;
+@define-color red #ff757f;
+@define-color green #c3e88d;
+@define-color yellow #ffc777;
+@define-color blue #82aaff;
+@define-color magenta #c099ff;
+@define-color cyan #86e1fc;
+@define-color white #c8d3f5;
+
+/* =========================
+   OPTIONAL (EXTRAS)
+   ========================= */
+
+@define-color orange #ff966c;
+@define-color comment #7a88cf;
+@define-color gutter #2f334d;
+@define-color selection #2d3f76;
+@define-color cursor #c8d3f5;
