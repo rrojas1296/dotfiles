@@ -1,5 +1,6 @@
 theme = TokyoNight Moon 
 font-family = JetBrainsMono Nerd Font Mono
+notify-on-command-finish = always
 macos-option-as-alt = true
 font-size = 12
 

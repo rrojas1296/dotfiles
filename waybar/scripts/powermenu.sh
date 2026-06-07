@@ -13,7 +13,7 @@ chosen=$(printf "%b\n" "$options" | $rofi_cmd)
 
 case "$chosen" in
   "󰗽   Logout")
-    hyprctl dispatch exit
+    hyprctl dispatch 'hl.dsp.exit()' 
     ;;
   "󰜉   Shutdown")
     systemctl poweroff
