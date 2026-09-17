@@ -28,12 +28,13 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "ghostty"
+local terminal    = "alacritty"
 local fileManager = "thunar"
 local menu        = "rofi -show drun"
 local screenshoot = 'grim -g "$(slurp -d)" - | wl-copy'
-local powermenu   = "powermenu.sh"
+local powermenu   = "eww open powermenu"
 local browser     = "brave"
+local firefox     = "firefox"
 
 
 -------------------
@@ -97,8 +98,8 @@ hl.config({
     border_size      = 2,
 
     col              = {
-      active_border   = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
-      inactive_border = "rgba(595959aa)",
+      active_border   = "#5e5e5e",
+      inactive_border = "#000000",
     },
 
     -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -149,9 +150,17 @@ hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
-hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, spring = "easy", style = "popin 87%" })
+hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "quick" })
+hl.animation({ leaf = "windows", enabled = true, speed = 4.1, spring = "easy", bezier = "easeInOutCubic" })
+hl.animation({
+  leaf = "windowsIn",
+  enabled = true,
+  speed = 4.1,
+  spring = "easy",
+  bezier = "easeOutQuint",
+  style =
+  "popin 87%"
+})
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
@@ -262,12 +271,11 @@ hl.device({
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
+-- Open Terminal
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + w", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
--- hl.bind(mainMod .. " + M",
---   hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+
+-- Move between windows vim like
 hl.bind(mainMod .. " + e", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + v", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + m", hl.dsp.exec_cmd(menu))
@@ -284,6 +292,9 @@ hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + x", hl.dsp.exec_cmd(powermenu))
 
 -- Browser
+hl.bind(mainMod .. " + f", hl.dsp.window.float())
+
+-- Firefox
 hl.bind(mainMod .. " + b", hl.dsp.exec_cmd(browser))
 
 -- Screenshoot
@@ -363,6 +374,15 @@ hl.window_rule({
   },
 
   no_focus = true,
+})
+
+hl.window_rule({
+  match = {
+    class = "float-term"
+  },
+  float = true,
+  size = { 1400, 800 },
+  center = true
 })
 
 -- Layer rules also return a handle.
