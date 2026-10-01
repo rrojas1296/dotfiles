@@ -1,24 +1,23 @@
 {
   "layer": "top",
-  "height": 34,
-  "modules-left": ["custom/launcher", "wlr/taskbar", "hyprland/window"],
-  "modules-center": ["hyprland/workspaces"],
+  "position": "top",
+  "height": 40,
+  "margin-top": 10,
+  "margin-left": 20,
+  "margin-right": 20,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": [
     "tray",
-    "clock",
-    "memory",
-    "pulseaudio",
-    "battery",
-    "custom/lang",
     "custom/updates",
-    "network"
+    "custom/lang",
+    "custom/volume",
+    "memory"
   ],
 
   "hyprland/workspaces": {
-    "disable-scroll": true,
+    "format": "{icon}",
     "on-click": "activate",
-    "all-outputs": true,
-    "active-only": false,
     "persistent-workspaces": {
       "1": [],
       "2": [],
@@ -28,17 +27,17 @@
       "6": [],
       "7": [],
     },
-    "format": "{icon}",
     "format-icons": {
-      "1": " ",
-      "2": " ",
-      "3": "󰈹 ",
+      "1": " ",
+      "2": " ",
+      "3": " ",
       "4": " ",
-      "5": " ",
+      "5": "󰓇 ",
       "6": " ",
       "7": " ",
-      "default": "󰊠 ",
-    }
+      "default": ""
+    },
+    "sort-by-number": true
   },
   "hyprland/window": {
     "format": "{}",
@@ -72,25 +71,15 @@
     "max-length": 50
   },
   "clock": {
-    "format": "󰥔  {:%I:%M %p}",
+    "format": "{:%A %d, %I:%M %p}",
     "interval": 60,
     "tooltip": true,
-    "tooltip-format": "{:%Y-%m-%d}",
+    "tooltip-format": "{:%Y-%m-%d}"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume} %",
-    "format-muted": " Muted",
-    "format-icons": {
-      "headphones": "",
-      "handsfree": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", " ", " "]
-    },
-    "scroll-step": 5,
-    "on-click": "pavucontrol"
+    "format": " {volume}%",
+    "on-click": "eww open volume",
+    "on-click-right": "eww close volume_popup"
   },
   "battery": {
     "format": "{icon} {capacity}%",
@@ -114,7 +103,15 @@
     "separate-outputs": true
   },
   "memory": {
-    "format": "  {used} GiB",
+    "format": "  {percentage}%",
     "interval": 1
+  },
+  "custom/volume": {
+    "exec": "pamixer --get-volume",
+    "format": "  {}%",
+    "interval": 1,
+    "on-click": "eww open volume",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5"
   }
 }

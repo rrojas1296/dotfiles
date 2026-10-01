@@ -20,3 +20,13 @@ export PATH="$HOME/.config/waybar/scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export TERMINAL="ghostty"
 export EDITOR="nvim"
+
+# opencode
+fish_add_path /home/oasis/.opencode/bin
+
+# pnpm
+set -gx PNPM_HOME '/home/oasis/.local/share/pnpm'
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+# pnpm end

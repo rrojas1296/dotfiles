@@ -2,7 +2,7 @@
    BASE
    ========================= */
 
-@define-color bg #222436;
+@define-color bg #000000;
 @define-color fg #c8d3f5;
 @define-color border #444a73;
 
@@ -17,7 +17,7 @@
 @define-color blue #82aaff;
 @define-color magenta #c099ff;
 @define-color cyan #86e1fc;
-@define-color white #c8d3f5;
+@define-color white #ffffff;
 
 /* =========================
    OPTIONAL (EXTRAS)

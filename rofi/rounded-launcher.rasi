@@ -1,18 +1,20 @@
 
 * {
-    background: rgba(26, 27, 38, 1);
-    background-alt: rgba(169, 177, 214, 0.1);
-    foreground: #EDEAF2;
-    foreground-alt: #B8AEC8;
+    background: rgba(23, 26, 33, 1);
+    background-alt: rgba(31, 35, 43, 1);
+    foreground: #cdd6f4;
+    selected-text: rgba(227, 66, 101, 1);
+
+    foreground-alt: #cdd6f4;
     accent:rgba(169, 177, 214, 0.5);
     border-radius: 20px;
-    padding: 12px;
+    padding: 8px;
     spacing: 16px;
 }
 
 window {
-    width: 780px;
-    height: 330px;
+    width: 600px;
+    height: 280px;
     background-color: @background;
     border: 2px;
     border-color: @accent;
@@ -43,7 +45,7 @@ entry {
 }
 
 listview {
-    columns: 5;
+    columns: 3;
     lines: 2;
     layout: vertical;
     spacing: 20px;
@@ -60,7 +62,7 @@ element {
 }
 
 element-icon {
-    size: 50px;
+    size: 40px;
     horizontal-align: 0.5;
     background-color: transparent;
 }
@@ -76,12 +78,8 @@ element selected {
     background-color: @background-alt;
 }
 
-element selected element-text {
-    text-color: @foreground;
-}
-
 element selected element-icon {
-    saturation: 1.2;
+    saturation: 1;
 }
 
 scrollbar {

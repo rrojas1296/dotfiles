@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TERMINAL="ghostty"  # Cambia aquí tu terminal favorita
+TERMINAL="alacritty"  # Cambia aquí tu terminal favorita
 
 show_updates() {
     official_updates=$(pacman -Qu 2>/dev/null | wc -l)
@@ -15,7 +15,7 @@ show_updates() {
 }
 
 update_system() {
-    $TERMINAL -e paru -Syu
+    $TERMINAL --class float-term -e paru -Syu
 }
 
 case "$1" in

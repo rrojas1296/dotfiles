@@ -5,7 +5,8 @@
 }
 
 window#waybar {
-  background-color: alpha(@bg, 0.8);
+  border-radius: 20px;
+  background-color: alpha(@bg, 0.5);
 }
 
 #workspaces button {
@@ -16,11 +17,8 @@ window#waybar {
 }
 
 #workspaces {
-  margin: 6px 0px 6px 20px;
-  border-radius: 50px;
-  padding: 0px 12px;
-  background-color: alpha(@bg, 0.4);
-  border: 1px solid @border;
+  border-radius: 12px;
+  margin: 0px 20px;
 }
 
 #workspaces button.active {
@@ -28,12 +26,8 @@ window#waybar {
 }
 
 #pulseaudio {
-  color: @green;
-  padding: 5px 16px;
-  border-radius: 12px;
-  margin: 6px 0px 6px 20px;
-  background-color: alpha(@bg, 0.4);
-  border: 1px solid @border;
+  color: @white;
+  margin: 0px 40px;
 }
 
 #pulseaudio.muted {
@@ -51,38 +45,20 @@ window#waybar {
 
 #tray {
   color: @fg;
-  padding: 5px 16px;
-  border-radius: 12px;
-  margin: 6px 0px 6px 20px;
-  background-color: alpha(@bg, 0.4);
-  border: 1px solid @border;
 }
 
 #clock {
   color: @white;
-  padding: 5px 16px;
-  border-radius: 12px;
-  margin: 6px 0px 6px 20px;
-  background-color: alpha(@bg, 0.4);
-  border: 1px solid @border;
 }
 
 #custom-lang {
-  color: @yellow;
-  padding: 5px 16px;
-  border-radius: 12px;
-  margin: 6px 0px 6px 20px;
-  background-color: alpha(@bg, 0.4);
-  border: 1px solid @border;
+  color: @white;
+  margin: 0px 40px;
 }
 
 #custom-updates {
-  color: @red;
-  padding: 5px 16px;
-  border-radius: 12px;
-  margin: 6px 0px 6px 20px;
-  background-color: alpha(@bg, 0.4);
-  border: 1px solid @border;
+  color: @white;
+  margin: 0px 0px 0px 40px;
 }
 
 #custom-network_speed {
@@ -97,7 +73,7 @@ window#waybar {
 #custom-launcher {
   /* BLue archlinux  */
   color: @red;
-  margin: 6px 0px 6px 20px;
+  margin: 8px 0px 8px 20px;
   padding: 5px 10px 5px 14px;
   border-radius: 12px;
   background-color: alpha(@bg, 0.4);
@@ -119,10 +95,7 @@ window#waybar {
 }
 
 #memory {
-  color: @blue;
-  padding: 5px 16px;
+  color: @white;
   border-radius: 12px;
-  margin: 6px 0px 6px 20px;
-  background-color: alpha(@bg, 0.4);
-  border: 1px solid @border;
+  margin: 0px 40px;
 }
