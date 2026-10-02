@@ -14,6 +14,7 @@ oh-my-posh init fish --config ~/.oh-my-posh/themes/amro.omp.json | source
 alias n="nvim"
 alias ll="ls -la"
 alias hr="herdr"
+alias ld="lazydocker"
 
 # pnpm
 set -gx PNPM_HOME '/home/oasis/.local/share/pnpm'
