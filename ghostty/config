@@ -4,13 +4,13 @@ notify-on-command-finish = always
 macos-option-as-alt = true
 font-size = 12
 
-background-opacity = 0.8
+background-opacity = 1
 background-blur = true
 
 confirm-close-surface = false
 
-window-padding-x = 8
-window-padding-y = 8
+window-padding-x = 12
+window-padding-y = 12
 
-window-width = 160
-window-height = 36
+window-width = 180
+window-height = 40

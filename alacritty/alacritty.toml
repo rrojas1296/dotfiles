@@ -3,10 +3,11 @@ import = ["~/.config/alacritty/theme.toml"]
 
 [font]
 normal = { family = "JetBrainsMonoNerdFont", style = "Regular" }
-size = 13
+size = 12
 
 [window]
 padding = { x = 14, y = 14 }
-opacity = 0.9
+dimensions = { columns = 180, lines = 40 }
+opacity = 1
 blur = true
 

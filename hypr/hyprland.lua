@@ -28,7 +28,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "alacritty"
+local terminal    = "ghostty"
 local fileManager = "thunar"
 local menu        = "rofi -show drun"
 local screenshoot = 'grim -g "$(slurp -d)" - | wl-copy'
@@ -291,8 +291,8 @@ hl.bind(mainMod .. " + j", hl.dsp.focus({ direction = "down" }))
 -- Powermenu
 hl.bind(mainMod .. " + x", hl.dsp.exec_cmd(powermenu))
 
--- Browser
-hl.bind(mainMod .. " + f", hl.dsp.window.float())
+-- Firefox
+hl.bind(mainMod .. " + f", hl.dsp.exec_cmd(firefox))
 
 -- Firefox
 hl.bind(mainMod .. " + b", hl.dsp.exec_cmd(browser))
